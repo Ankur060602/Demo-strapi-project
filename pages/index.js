@@ -1,8 +1,6 @@
-import Discrp from "@/components/Discrp";
 import Layout from "@/components/Layout";
 import Links from "@/components/Links";
 import { Fetcher } from "@/lib/api";
-// import { getServerSideProps } from "next/dist/build/templates/pages";
 import React from "react";
 
 const Landing = ({ link }) => {

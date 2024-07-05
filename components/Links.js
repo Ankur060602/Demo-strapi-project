@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const Links = ({ links }) => {
@@ -21,11 +22,11 @@ const Links = ({ links }) => {
             "7rT67yVgiERHi4def5He8vDD3nc2ffna6fGppONhidS6fppJQ62DL5Jq",
         },
         params: {
-          query: "office staff", // Search for coding-related images
-          per_page: 1, // Number of images to fetch
+          query: "office staff",
+          per_page: 1,
           page: Math.floor(Math.random() * 10) + 1,
-          orientation: "square", // Ensure landscape orientation for consistent dimensions
-          min_width: 500, // Minimum width of 500 pixels
+          orientation: "square",
+          min_width: 500,
           min_height: 500,
         },
       });
@@ -51,10 +52,12 @@ const Links = ({ links }) => {
             <div key={link.id} className="flex h-full items-center">
               <div className=" static flex text-white pr-4 justify-end w-full h-full mr-20">
                 <div className="rounded">
-                  <img
+                  <Image
                     src={randomImageUrl}
                     alt="Random Image"
-                    className="h-auto w-[350px] rounded-full"
+                    width={350}
+                    height={350}
+                    className="rounded-full"
                   />
                 </div>
                 <div className="w-[80px] h-[80px] rounded-full bg-gray-800 absolute opacity-30 right-74 top-[450px]"></div>
