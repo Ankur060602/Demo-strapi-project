@@ -25,7 +25,7 @@ const Landing = ({ link }) => {
 
 export default Landing;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const demoresponse = await Fetcher(`${process.env.NEXT_PUBLIC_STRAPI_URL}/links`);
   console.log(demoresponse);
   return {
